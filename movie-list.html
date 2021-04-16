@@ -28,6 +28,11 @@
         <div class="row">
             <a onclick="return theDescFunction();" href="#" class="header-btn"></i>title in descending</a>
             <a onclick="return theAscFunction();"  href="#" class="header-btn"></i>title in ascending</a>
+            <a onclick="return sortByYearDescFunction();"  href="#" class="header-btn"></i>sortByYearDescFunction</a>
+            <a onclick="return sortByYearAscFunction();"  href="#" class="header-btn"></i>sortByYearAscFunction</a>
+
+            
+
             
         </div>
 
@@ -107,7 +112,7 @@
                 });
         }
 
-        function sortTrackingId(veri, order) {
+        function sortTrackingReleaseYear(veri, order) {
             return veri.sort(order === 'DESC'
                 ? function (b, a) {
                     a = a.releaseYear.slice(0, 4);
@@ -121,6 +126,29 @@
                 });
         }
 
+        function template(array){
+            for (let i = 0; i < counter; i++) {
+                        let releaseYearData = array[i].releaseYear;
+                        console.log("Title: " + array[i].Title);
+
+                        if (releaseYearData >= 2010) {
+                            let divElementCol = document.createElement('div')
+                            divElementCol.classList.add('col-6', 'col-md-4', 'col-lg-2');
+
+                            let divElementImage = document.createElement('img')
+                            divElementImage.setAttribute("src", array[i].imgUrl);
+                            divElementImage.setAttribute("width", "150px");
+
+                            // let parent = document.querySelector('#filmler-listele')//döngü dışına taşındı
+                            parent.appendChild(divElementCol)
+                            divElementCol.appendChild(divElementImage)
+
+                        } else {
+                            counter++;
+                            console.log("!!!---This Movie Release Year <=2010");
+                        }
+                    }
+        }
 
         var data;
         
@@ -133,43 +161,11 @@
             .then(veri => {
                 // console.log(veri);
                 sortTrackingTitle(veri);
-                // console.log(veri);
-
-                // sortTrackingTitle(veri, 'DESC');
-                // console.log(veri);
-
-
-                // console.log("veri liste uzunluğu= " + veri.length);
-
-                // console.log("imgUrl verisi=" + veri[0].imgUrl);
                 
-                for (let i = 0; i < counter; i++) {
-                    let releaseYearData = veri[i].releaseYear;
-                    console.log("Title: " + veri[i].Title);
+                template(veri);
 
-
-                    if (releaseYearData >= 2010) {
-                        releaseYearDataArray.push(releaseYearData);
-                        console.log(releaseYearDataArray);
-                        let divElementCol = document.createElement('div')
-                        divElementCol.classList.add('col-6', 'col-md-4', 'col-lg-2');
-
-                        let divElementImage = document.createElement('img')
-                        divElementImage.setAttribute("src", veri[i].imgUrl);
-                        divElementImage.setAttribute("width", "150px");
-
-                        // let parent = document.querySelector('#filmler-listele')//döngü dışına taşındı
-                        parent.appendChild(divElementCol)
-                        divElementCol.appendChild(divElementImage)
-
-                    } else {
-                        counter++;
-                        console.log("!!!---This Movie Release Year <=2010");
-                    }
-                }
-
-                sortTrackingId(veri);
-                console.log("releaseYearDataArray: "+JSON.stringify(veri));
+                // sortTrackingReleaseYear(veri);
+                // console.log("releaseYearDataArray: "+JSON.stringify(veri));
             })
 
         }
@@ -185,42 +181,47 @@
                 .then(response => response.json())
                 .then(veri => {
 
-                    // console.log(veri);
-
-                    // sortTrackingTitle(veri);
-                    // console.log(veri);
-
                     sortTrackingTitle(veri, 'DESC');
                     console.log(veri);
 
-
-                    // console.log("veri liste uzunluğu= " + veri.length);
-                    // console.log("imgUrl verisi=" + veri[0].imgUrl);
-                    
-                    for (let i = 0; i < counter; i++) {
-                        let releaseYearData = veri[i].releaseYear;
-                        console.log("Title: " + veri[i].Title);
-
-                        if (releaseYearData >= 2010) {
-                            let divElementCol = document.createElement('div')
-                            divElementCol.classList.add('col-6', 'col-md-4', 'col-lg-2');
-
-                            let divElementImage = document.createElement('img')
-                            divElementImage.setAttribute("src", veri[i].imgUrl);
-                            divElementImage.setAttribute("width", "150px");
-
-                            // let parent = document.querySelector('#filmler-listele')//döngü dışına taşındı
-                            parent.appendChild(divElementCol)
-                            divElementCol.appendChild(divElementImage)
-
-                        } else {
-                            counter++;
-                            console.log("!!!---This Movie Release Year <=2010");
-                        }
-                    }
+                    template(veri);
 
                 })
         }
+
+        function sortByYearDescFunction(){
+            counter=21;//release yıl sınırlaması nedeniyle değiştiği için yeniden belirliyoruz.
+            $("#filmler-listele").html("");
+            data = fetch("movies.json")
+                .then(response => response.json())
+                .then(veri => {
+
+                    sortTrackingReleaseYear(veri, 'DESC');
+                    console.log(veri);
+
+                    template(veri);
+
+                })
+
+        }
+
+        function sortByYearAscFunction(){
+            counter=21;//release yıl sınırlaması nedeniyle değiştiği için yeniden belirliyoruz.
+            $("#filmler-listele").html("");
+            data = fetch("movies.json")
+                .then(response => response.json())
+                .then(veri => {
+
+                    sortTrackingReleaseYear(veri);
+                    console.log(veri);
+
+                    template(veri);
+
+                })
+
+        }
+
+        
 
 
     </script>
