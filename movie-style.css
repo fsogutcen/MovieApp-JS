@@ -89,3 +89,7 @@ body{
 .series img:hover{
     transform: translateY(-10px);
 }
+
+.footer{
+    border-top: 1px solid #f6f6f6;
+}
