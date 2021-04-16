@@ -26,14 +26,15 @@
     <div class="container series">
         <h3>Popular Movies</h3>
         <div class="row">
-            <a id="desc-btn" onclick="return theDescFunction();" href="#" class="header-btn"></i>title in descending </a>
-            <a href="#" class="header-btn"></i>title in ascending</a>
-        </div>
-     
+            <a onclick="return theDescFunction();" href="#" class="header-btn"></i>title in descending</a>
+            <a onclick="return theAscFunction();"  href="#" class="header-btn"></i>title in ascending</a>
             
+        </div>
+
+
 
         <div class="row" id="filmler-listele">
-            
+
         </div>
     </div>
 
@@ -47,10 +48,52 @@
         <!-- veriler bu bölümde olacak-->
     </div>
 
+
+    <footer class="footer text-center text-white mt-4">
+        <!-- Grid container -->
+        <div class="container p-3 pb-0">
+          <!-- Section: Social media -->
+          <section class="">
+            <!-- Facebook -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+              ><i class="fa fa-facebook-f"></i
+            ></a>
+      
+            <!-- Twitter -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+              ><i class="fa fa-twitter"></i
+            ></a>
+      
+            <!-- Google -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+              ><i class="fa fa-google"></i
+            ></a>
+      
+            <!-- Instagram -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+              ><i class="fa fa-instagram"></i
+            ></a>
+          </section>
+          <!-- Section: Social media -->
+        </div>
+        <!-- Grid container -->
+      
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+          © 2021 -
+          <a class="text-white" href="https://www.linkedin.com/in/fsogutcen/" target="_blank"> by fsogutcen</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+
     <script>
 
+        let parent = document.querySelector('#filmler-listele')
+        let counter = 21;
+        let releaseYearDataArray = [];
 
-        function sortTrackingNo(veri, order) {
+
+        function sortTrackingTitle(veri, order) {
             return veri.sort(order === 'DESC'
                 ? function (b, a) {
                     a = a.Title.slice(0, 3);
@@ -63,34 +106,49 @@
                     return isNaN(a) - isNaN(b) || a > b || -(a < b);
                 });
         }
-                
+
+        function sortTrackingId(veri, order) {
+            return veri.sort(order === 'DESC'
+                ? function (b, a) {
+                    a = a.releaseYear.slice(0, 4);
+                    b = b.releaseYear.slice(0, 4);
+                    return isNaN(b) - isNaN(a) || a > b || -(a < b);
+                }
+                : function (a, b) {
+                    a = a.releaseYear.slice(0, 4);
+                    b = b.releaseYear.slice(0, 4);
+                    return isNaN(a) - isNaN(b) || a > b || -(a < b);
+                });
+        }
 
 
         var data;
-        data= fetch("movies.json")
+        
+
+        function theAscFunction() {
+            counter=21; //release yıl sınırlaması nedeniyle değiştiği için yeniden belirliyoruz.
+            $("#filmler-listele").html("");
+            data = fetch("movies.json")
             .then(response => response.json())
             .then(veri => {
                 // console.log(veri);
-                sortTrackingNo(veri);
+                sortTrackingTitle(veri);
                 // console.log(veri);
 
-                // sortTrackingNo(veri, 'DESC');
+                // sortTrackingTitle(veri, 'DESC');
                 // console.log(veri);
 
 
                 // console.log("veri liste uzunluğu= " + veri.length);
-                
+
                 // console.log("imgUrl verisi=" + veri[0].imgUrl);
-                let parent = document.querySelector('#filmler-listele')
-                let counter=21;
-                let releaseYearDataArray = [];
+                
                 for (let i = 0; i < counter; i++) {
                     let releaseYearData = veri[i].releaseYear;
-                    console.log("Title: "+ veri[i].Title);
-                    
-                  
+                    console.log("Title: " + veri[i].Title);
 
-                    if(releaseYearData>=2010){
+
+                    if (releaseYearData >= 2010) {
                         releaseYearDataArray.push(releaseYearData);
                         console.log(releaseYearDataArray);
                         let divElementCol = document.createElement('div')
@@ -103,76 +161,68 @@
                         // let parent = document.querySelector('#filmler-listele')//döngü dışına taşındı
                         parent.appendChild(divElementCol)
                         divElementCol.appendChild(divElementImage)
-                        
-                    }else{
+
+                    } else {
                         counter++;
                         console.log("!!!---This Movie Release Year <=2010");
                     }
                 }
 
-
-                
-
-
+                sortTrackingId(veri);
+                console.log("releaseYearDataArray: "+JSON.stringify(veri));
             })
 
-            // let descBtn = document.querySelector('#desc-btn')
-            function theDescFunction(){
-                    $("#filmler-listele").html("");
-                    data = fetch("movies.json")
-            .then(response => response.json())
-            .then(veri => {
+        }
+        
+
+        theAscFunction();
 
 
+        function theDescFunction() {
+            counter=21;//release yıl sınırlaması nedeniyle değiştiği için yeniden belirliyoruz.
+            $("#filmler-listele").html("");
+            data = fetch("movies.json")
+                .then(response => response.json())
+                .then(veri => {
 
-                // console.log(veri);
+                    // console.log(veri);
 
-               
-                
+                    // sortTrackingTitle(veri);
+                    // console.log(veri);
 
-                // sortTrackingNo(veri);
-                // console.log(veri);
-
-                sortTrackingNo(veri, 'DESC');
-                console.log(veri);
+                    sortTrackingTitle(veri, 'DESC');
+                    console.log(veri);
 
 
-                // console.log("veri liste uzunluğu= " + veri.length);
-                // console.log("imgUrl verisi=" + veri[0].imgUrl);
-                let parent = document.querySelector('#filmler-listele')
-                let counter=21;
-                for (let i = 0; i < counter; i++) {
-                    let releaseYearData = veri[i].releaseYear;
-                    console.log("Title: "+ veri[i].Title);
+                    // console.log("veri liste uzunluğu= " + veri.length);
+                    // console.log("imgUrl verisi=" + veri[0].imgUrl);
+                    
+                    for (let i = 0; i < counter; i++) {
+                        let releaseYearData = veri[i].releaseYear;
+                        console.log("Title: " + veri[i].Title);
 
-                    if(releaseYearData>=2010){
-                        let divElementCol = document.createElement('div')
-                        divElementCol.classList.add('col-6', 'col-md-4', 'col-lg-2');
+                        if (releaseYearData >= 2010) {
+                            let divElementCol = document.createElement('div')
+                            divElementCol.classList.add('col-6', 'col-md-4', 'col-lg-2');
 
-                        let divElementImage = document.createElement('img')
-                        divElementImage.setAttribute("src", veri[i].imgUrl);
-                        divElementImage.setAttribute("width", "150px");
+                            let divElementImage = document.createElement('img')
+                            divElementImage.setAttribute("src", veri[i].imgUrl);
+                            divElementImage.setAttribute("width", "150px");
 
-                        // let parent = document.querySelector('#filmler-listele')//döngü dışına taşındı
-                        parent.appendChild(divElementCol)
-                        divElementCol.appendChild(divElementImage)
-                        
-                    }else{
-                        counter++;
-                        console.log("!!!---This Movie Release Year <=2010");
+                            // let parent = document.querySelector('#filmler-listele')//döngü dışına taşındı
+                            parent.appendChild(divElementCol)
+                            divElementCol.appendChild(divElementImage)
+
+                        } else {
+                            counter++;
+                            console.log("!!!---This Movie Release Year <=2010");
+                        }
                     }
-                }
+
+                })
+        }
 
 
-                
-
-
-            })
-                    
-
-                    
-                }
-            
     </script>
 </body>
 
