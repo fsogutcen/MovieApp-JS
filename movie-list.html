@@ -211,9 +211,14 @@
             data = fetch("movies.json")
                 .then(response => response.json())
                 .then(veri => {
+                    //JSON to array
+                    var myJsonString = JSON.stringify(veri);
+                    var myJsonList = JSON.parse(myJsonString)
+
                     sortTrackingTitle(veri, 'DESC');
                     //console.log(veri);
                     template(veri);
+                    changeImage(myJsonList);
                 })
         }
 
@@ -223,9 +228,14 @@
             data = fetch("movies.json")
                 .then(response => response.json())
                 .then(veri => {
+                    //JSON to array
+                    var myJsonString = JSON.stringify(veri);
+                    var myJsonList = JSON.parse(myJsonString)
+
                     sortTrackingReleaseYear(veri, 'DESC');
                     // console.log(veri);
                     template(veri);
+                    changeImage(myJsonList);
                 })
 
         }
@@ -236,11 +246,17 @@
             data = fetch("movies.json")
                 .then(response => response.json())
                 .then(veri => {
+                    //JSON to array
+                    var myJsonString = JSON.stringify(veri);
+                    var myJsonList = JSON.parse(myJsonString)
+
                     sortTrackingReleaseYear(veri);
                     // console.log(veri);
                     template(veri);
+                    changeImage(myJsonList);
                 })
         }
+
 
     </script>
 </body>
