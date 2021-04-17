@@ -29,10 +29,10 @@
 	},
 	{
 		"Id":"5",
-		"Title":"Kırmızı Oda",
-		"releaseYear":"2012",
-		"Series":"Drama",
-		"imgUrl":"./movie-images/5-kirmizi-oda.jpg"
+		"Title":"Inside out",
+		"releaseYear":"2015",
+		"Series":"Comedy",
+		"imgUrl":"./movie-images/5-inside-out.jpg"
 	},
 	{
 		"Id":"6",

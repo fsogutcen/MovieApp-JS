@@ -13,14 +13,74 @@
 
 </head>
 
+<style>
+    .navbar-brand,
+    footer {
+        font-family: 'Marck Script', cursive;
+    }
+
+    #mainNav {
+        font-family: 'Lemonada', cursive;
+    }
+
+    .navbar-brand {
+        font-size: 26px !important;
+    }
+
+    #mainNav .navbar-nav>li.nav-item>a {
+        padding: 10px 20px;
+        font-size: 14px !important;
+        color: #fff;
+
+    }
+
+    #mainNav .navbar-nav>li.nav-item>a:hover {
+        color: rgba(255, 255, 255, .6);
+        /*background: #1a1a1a;*/
+        text-shadow: 0 0 15px rgba(255, 255, 255, .5), 0 0 10px rgba(255, 255, 255, .5);
+    }
+
+    #mainNav .navbar-brand {
+        padding: 10px 20px;
+        color: #fff;
+    }
+</style>
+
 <body>
 
-    <div class="container header">
+    <!-- <div class="container header">
         <img src="movie-images/movies-logo.png" class="logo">
-        <a onclick="myFunction()" href="#" class="header-btn"><i class="fa fa-user"></i>Account</a>
-    </div>
+        <a href="#" class="header-btn"><i class="fa fa-user"></i>Account</a>
+    </div> -->
 
-    <div class="container movie-details">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" style="background-color:black">
+
+        <div class="container" id="navDiv">
+
+            <img style="width:auto;height:50px;" src="movie-images/movies-logo.png" />
+            <a class="navbar-brand" href="#">Movies</a>
+
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Account</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <div class="container movie-details" style="margin-top: 80px;">
         <div class="row">
             <div class="col-md-6 left-box">
                 <h1 id="movie-title">Leyla ile Mecnun</h1>
@@ -45,10 +105,23 @@
     <div class="container series">
         <h3>Popular Movies</h3>
         <div class="row">
-            <a onclick="return theDescFunction();" href="#" class="header-btn"></i>title in descending</a>
-            <a onclick="return theAscFunction();" href="#" class="header-btn"></i>title in ascending</a>
-            <a onclick="return sortByYearDescFunction();" href="#" class="header-btn"></i>sortByYearDescFunction</a>
-            <a onclick="return sortByYearAscFunction();" href="#" class="header-btn"></i>sortByYearAscFunction</a>
+            <!-- Example single danger button -->
+            <div class="btn-group">
+                <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+                    Action
+                </button>
+                <div class="dropdown-menu">
+                    <a id="title-desc" class="dropdown-item" href="#">Title In Descending</a>
+                    <div class="dropdown-divider"></div>
+                    <a id="title-asc" class="dropdown-item" href="#">Title In Ascending</a>
+                    <div class="dropdown-divider"></div>
+                    <a id="year-desc" class="dropdown-item" href="#">Year In Descending</a>
+                    <div class="dropdown-divider"></div>
+                    <a id="year-asc" class="dropdown-item" href="#">Year In Ascending</a>
+                 
+                </div>
+            </div>
         </div>
 
         <div class="row" id="filmler-listele">
@@ -91,8 +164,30 @@
 
     <div class='back-to-top' id='back-to-top' title='Back to top'><i class='fa fa-chevron-up'></i></div>
 
+    <script src="./bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
     <script>
+
+$('.dropdown-menu a').on('click', function(){
+    if (this.id=="title-asc") {
+        theAscFunction();
+    }else if (this.id=="title-desc") {
+        theDescFunction();
+    }else if (this.id=="year-desc") {
+        sortByYearDescFunction();
+    }else if (this.id=="year-asc") {
+        sortByYearAscFunction();
+    }else{
+        alert("error in sorting type selection");
+    }
+
+    // $("ul.dropdown-menu li").click(function() {
+    //     var $link = $(this);
+    //     document.getElementById("dropdown").innerHTML = $("a", $link).html();
+    //     document.getElementById("result").innerHTML = process(this.id);
+    // });
+});
 
         // Back to top button
         (function () {
@@ -179,7 +274,7 @@
                 console.log(myList[event.target.id - 1]);
                 var num = event.target.id - 1
                 featuredImg.setAttribute("src", myList[num].imgUrl);
-                featuredTitle.innerHTML=(myList[num].Title);
+                featuredTitle.innerHTML = (myList[num].Title);
             });
         }
 
