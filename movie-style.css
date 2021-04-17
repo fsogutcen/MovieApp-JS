@@ -8,6 +8,7 @@ body{
     background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(movie-images/background-2.jpg);
     background-position: center;
     background-size: cover;
+    font-family: nunito !important;
 }
 
 .logo{
@@ -127,4 +128,33 @@ body{
 .back-to-top.show {
     visibility: visible;
     opacity: 1;
+}
+
+#logo-img {
+    width:auto;
+    height:50px;
+}
+
+@media only screen and (max-width: 420px) {
+    #logo-img {
+        height: 40px;
+    }
+  }
+
+.navbar-brand, footer, #mainNav {
+    font-family: 'Marck Script', cursive;
+}
+
+.navbar-brand {
+    font-size: 26px !important;
+}
+
+#mainNav .navbar-nav>li.nav-item>a, #mainNav .navbar-brand {
+    padding: 10px 20px;
+    color: #fff;
+}
+
+#mainNav .navbar-nav>li.nav-item>a:hover {
+    color: rgba(255, 255, 255, .6);
+    text-shadow: 0 0 15px rgba(255, 255, 255, .5), 0 0 10px rgba(255, 255, 255, .5);
 }

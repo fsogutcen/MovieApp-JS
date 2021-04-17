@@ -15,31 +15,31 @@
 	},
 	{
 		"Id":"3",
-		"Title":"Avrupa Yakası",
-		"releaseYear":"2004",
-		"Series":"Comedy",
-		"imgUrl":"./movie-images/3-avrupa-yakasi.jpg"
+		"Title":"Iron Man",
+		"releaseYear":"2008",
+		"Series":"Action",
+		"imgUrl":"./movie-images/3-iron-man.jpg"
 	},
 	{
 		"Id":"4",
-		"Title":"Leyla ile Mecnun",
+		"Title":"Interstellar",
 		"releaseYear":"2012",
-		"Series":"Comedy",
-		"imgUrl":"./movie-images/4-leyla-ile-mecnun.jpg"
+		"Series":"Action",
+		"imgUrl":"./movie-images/4-interstellar.jpg"
 	},
 	{
 		"Id":"5",
-		"Title":"Inside out",
+		"Title":"Inside Out",
 		"releaseYear":"2015",
 		"Series":"Comedy",
 		"imgUrl":"./movie-images/5-inside-out.jpg"
 	},
 	{
 		"Id":"6",
-		"Title":"Masumlar Apartmanı",
-		"releaseYear":"2012",
-		"Series":"Drama",
-		"imgUrl":"./movie-images/6-masumlar-apartmani.jpg"
+		"Title":"Avatar",
+		"releaseYear":"2019",
+		"Series":"sci-fi",
+		"imgUrl":"./movie-images/6-avatar.jpg"
 	},
 	{
 		"Id":"7",
@@ -59,14 +59,14 @@
 		"Id":"9",
 		"Title":"Matrix (The Matrix)",
 		"releaseYear":"2012",
-		"Series":"Action",
+		"Series":"sci-fi",
 		"imgUrl":"./movie-images/9-matrix.jpg"
 	},
 	{
 		"Id":"10",
 		"Title":"The Martian",
 		"releaseYear":"2015",
-		"Series":"Action",
+		"Series":"sci-fi",
 		"imgUrl":"./movie-images/10-the-martian.jpg"
 	},
 	{
@@ -99,17 +99,17 @@
 	},
 	{
 		"Id":"15",
-		"Title":"The Chamber",
-		"releaseYear":"2016",
-		"Series":"Horror",
-		"imgUrl":"https://images-na.ssl-images-amazon.com/images/M/MV5BNTVlODgwMjgtZGUzMy00ZTY1LWIyMDEtYTI2Y2JlYzVjZTNkXkEyXkFqcGdeQXVyNTg0MDM1MzY@._V1_SY500_CR0,0,337,500_AL_.jpg"
+		"Title":"Fast & Furious 9",
+		"releaseYear":"2021",
+		"Series":"Action",
+		"imgUrl":"./movie-images/15-fast-and-furious.jpg"
 	},
 	{
 		"Id":"16",
-		"Title":"Survivors Guide to Prison",
-		"releaseYear":"2012",
+		"Title":"Star Wars: The Rise of Skywalker",
+		"releaseYear":"2019",
 		"Series":"Documentary",
-		"imgUrl":"https://images-na.ssl-images-amazon.com/images/M/MV5BNzhmNmI5MDMtZDEyOC00ODkyLTkwODItODQzODAzY2QyZjVlXkEyXkFqcGdeQXVyMzQwMTY2Nzk@._V1_SY500_CR0,0,357,500_AL_.jpg"
+		"imgUrl":"./movie-images/16-star-wars-the-rise-of-skywalker.jpeg"
 	},
 	{
 		"Id":"17",
@@ -166,5 +166,20 @@
 		"releaseYear":"2012",
 		"Series":"Action",
 		"imgUrl":"./movie-images/the-lord-of-the-rings.jpg"
+	},
+	{
+		"Id":"25",
+		"Title":"Babam ve Oğlum",
+		"releaseYear":"2012",
+		"Series":"Drama",
+		"imgUrl":"./movie-images/25-babam-ve-oglum.jpg"
+	},
+	{
+		"Id":"26",
+		"Title":"Rocky Balboa",
+		"releaseYear":"2006",
+		"Series":"Drama",
+		"imgUrl":"./movie-images/26-rockybalboa.jpg"
 	}
+	
 ]
