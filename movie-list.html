@@ -13,39 +13,6 @@
 
 </head>
 
-<style>
-    .navbar-brand,
-    footer {
-        font-family: 'Marck Script', cursive;
-    }
-
-    #mainNav {
-        font-family: 'Lemonada', cursive;
-    }
-
-    .navbar-brand {
-        font-size: 26px !important;
-    }
-
-    #mainNav .navbar-nav>li.nav-item>a {
-        padding: 10px 20px;
-        font-size: 14px !important;
-        color: #fff;
-
-    }
-
-    #mainNav .navbar-nav>li.nav-item>a:hover {
-        color: rgba(255, 255, 255, .6);
-        /*background: #1a1a1a;*/
-        text-shadow: 0 0 15px rgba(255, 255, 255, .5), 0 0 10px rgba(255, 255, 255, .5);
-    }
-
-    #mainNav .navbar-brand {
-        padding: 10px 20px;
-        color: #fff;
-    }
-</style>
-
 <body>
 
     <!-- <div class="container header">
@@ -57,7 +24,7 @@
 
         <div class="container" id="navDiv">
 
-            <img style="width:auto;height:50px;" src="movie-images/movies-logo.png" />
+            <img id="logo-img" src="movie-images/movies-logo.png" />
             <a class="navbar-brand" href="#">Movies</a>
 
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
@@ -83,45 +50,48 @@
     <div class="container movie-details" style="margin-top: 80px;">
         <div class="row">
             <div class="col-md-6 left-box">
-                <h1 id="movie-title">Leyla ile Mecnun</h1>
+                <h1 id="movie-title">The Martian</h1>
                 <p>Film açıklaması gibi bişeylerin olduğu kısım. <br />Bir miktar da film bilgisi...</p>
                 <p>Cast: </p>
                 <div class="casting">
-                    <img src="movie-images/leyla-ile-mecnun-ali-atay.jpg" title="Ali Atay" />
-                    <img src="movie-images/leyla-ile-mecnun-cengiz-bozkurt.jpg" title="cengiz-bozkurt" />
-                    <img src="movie-images/leyla-ile-mecnun-ezgi-asaroglu.jpg" title="ezgi-asaroglu" />
-                    <img src="movie-images/leyla-ile-mecnun-serkan-keskin.jpg" title="serkan-keskin" />
+                    <img src="movie-images/the-martian-1.jpg" title="" />
+                    <img src="movie-images/the-martian-2.jpg" title="" />
+                    <img src="movie-images/the-martian-3.jpg" title="" />
+                    <img src="movie-images/the-martian-4.jpg" title="" />
                 </div>
                 <a href="#"><i class="fa fa-play"></i>Watch Now</a>
                 <a href="#" class="download-btn"><i class="fa fa-arrow-down"></i>Download</a>
 
             </div>
             <div class="col-md-6 text-center">
-                <img src="movie-images/4-leyla-ile-mecnun.jpg" class="movie-img" />
+                <img src="movie-images/10-the-martian.jpg" class="movie-img" />
             </div>
         </div>
     </div>
 
     <div class="container series">
-        <h3>Popular Movies</h3>
         <div class="row">
-            <!-- Example single danger button -->
-            <div class="btn-group">
-                <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
-                    aria-expanded="false">
-                    Action
-                </button>
-                <div class="dropdown-menu">
-                    <a id="title-desc" class="dropdown-item" href="#">Title In Descending</a>
-                    <div class="dropdown-divider"></div>
-                    <a id="title-asc" class="dropdown-item" href="#">Title In Ascending</a>
-                    <div class="dropdown-divider"></div>
-                    <a id="year-desc" class="dropdown-item" href="#">Year In Descending</a>
-                    <div class="dropdown-divider"></div>
-                    <a id="year-asc" class="dropdown-item" href="#">Year In Ascending</a>
-                 
-                </div>
+            <div class="col-12 col-sm-6">
+                <h3>Popular Movies</h3>
             </div>
+            <div class="col-12 col-sm-6">
+                <div style="float: right;" class="btn-group">
+                    <button id="sort-btn" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        Sorting by
+                    </button>
+                    <div class="dropdown-menu">
+                        <a id="title-desc" class="dropdown-item" href="#">Title In Descending</a>
+                        <div class="dropdown-divider"></div>
+                        <a id="title-asc" class="dropdown-item" href="#">Title In Ascending</a>
+                        <div class="dropdown-divider"></div>
+                        <a id="year-desc" class="dropdown-item" href="#">Year In Descending</a>
+                        <div class="dropdown-divider"></div>
+                        <a id="year-asc" class="dropdown-item" href="#">Year In Ascending</a>
+                     
+                    </div>
+                </div>
+            </div>   
         </div>
 
         <div class="row" id="filmler-listele">
@@ -171,22 +141,21 @@
 
 $('.dropdown-menu a').on('click', function(){
     if (this.id=="title-asc") {
+        $('#sort-btn').text("Title In Ascending");
         theAscFunction();
     }else if (this.id=="title-desc") {
+        $('#sort-btn').text("Title In Descending");
         theDescFunction();
     }else if (this.id=="year-desc") {
+        $('#sort-btn').text("Year In Descending");
         sortByYearDescFunction();
     }else if (this.id=="year-asc") {
+        $('#sort-btn').text("Year In Ascending");
         sortByYearAscFunction();
     }else{
         alert("error in sorting type selection");
     }
 
-    // $("ul.dropdown-menu li").click(function() {
-    //     var $link = $(this);
-    //     document.getElementById("dropdown").innerHTML = $("a", $link).html();
-    //     document.getElementById("result").innerHTML = process(this.id);
-    // });
 });
 
         // Back to top button
