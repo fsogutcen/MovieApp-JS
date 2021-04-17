@@ -1,62 +1,62 @@
 [
 	{
-		"Id":"01",
+		"Id":"1",
 		"Title":"Amelie",
 		"releaseYear":"2012",
 		"Series":"Romantic Comedy",
 		"imgUrl":"./movie-images/1-Amelie-poster.jpg"
 	},
 	{
-		"Id":"02",
+		"Id":"2",
 		"Title":"Organize İşler",
 		"releaseYear":"2012",
 		"Series":"Comedy",
 		"imgUrl":"./movie-images/2-organize-isler.jpg"
 	},
 	{
-		"Id":"03",
+		"Id":"3",
 		"Title":"Avrupa Yakası",
 		"releaseYear":"2004",
 		"Series":"Comedy",
 		"imgUrl":"./movie-images/3-avrupa-yakasi.jpg"
 	},
 	{
-		"Id":"04",
+		"Id":"4",
 		"Title":"Leyla ile Mecnun",
 		"releaseYear":"2012",
 		"Series":"Comedy",
 		"imgUrl":"./movie-images/4-leyla-ile-mecnun.jpg"
 	},
 	{
-		"Id":"05",
+		"Id":"5",
 		"Title":"Kırmızı Oda",
 		"releaseYear":"2012",
 		"Series":"Drama",
 		"imgUrl":"./movie-images/5-kirmizi-oda.jpg"
 	},
 	{
-		"Id":"06",
+		"Id":"6",
 		"Title":"Masumlar Apartmanı",
 		"releaseYear":"2012",
 		"Series":"Drama",
 		"imgUrl":"./movie-images/6-masumlar-apartmani.jpg"
 	},
 	{
-		"Id":"07",
+		"Id":"7",
 		"Title":"Arog",
 		"releaseYear":"2012",
 		"Series":"Comedy",
 		"imgUrl":"./movie-images/7-Arog.jpg"
 	},
 	{
-		"Id":"08",
+		"Id":"8",
 		"Title":"Gora",
 		"releaseYear":"2012",
 		"Series":"Comedy",
 		"imgUrl":"./movie-images/8-Gora.jpg"
 	},
 	{
-		"Id":"09",
+		"Id":"9",
 		"Title":"Matrix (The Matrix)",
 		"releaseYear":"2012",
 		"Series":"Action",
@@ -64,10 +64,10 @@
 	},
 	{
 		"Id":"10",
-		"Title":"Game Night",
-		"releaseYear":"2018",
+		"Title":"The Martian",
+		"releaseYear":"2015",
 		"Series":"Action",
-		"imgUrl":"https://images-na.ssl-images-amazon.com/images/M/MV5BMjQxMDE5NDg0NV5BMl5BanBnXkFtZTgwNTA5MDE2NDM@._V1_SY500_CR0,0,337,500_AL_.jpg"
+		"imgUrl":"./movie-images/10-the-martian.jpg"
 	},
 	{
 		"Id":"11",
@@ -113,72 +113,58 @@
 	},
 	{
 		"Id":"17",
-		"Title":"xxx",
-		"releaseYear":"2012",
-		"Series":"Romantic Comedy",
-		"imgUrl":"./movie-images/6-masumlar-apartmani.jpg"
+		"Title":"The Boss Baby",
+		"releaseYear":"2017",
+		"Series":"Comedy",
+		"imgUrl":"./movie-images/17-boss-baby.jpg"
 	},
 	{
 		"Id":"18",
-		"Title":"xxx",
-		"releaseYear":"2012",
-		"Series":"Romantic Comedy",
-		"imgUrl":"./movie-images/6-masumlar-apartmani.jpg"
+		"Title":"Eternal Sunshine of the Spotless Mind",
+		"releaseYear":"2014",
+		"Series":"Romantic",
+		"imgUrl":"./movie-images/18-eternal-sunshine-of-the-spotless-mind.jpg"
 	},
 	{
 		"Id":"19",
-		"Title":"xxx",
+		"Title":"The Incredibles",
 		"releaseYear":"2012",
-		"Series":"Romantic Comedy",
-		"imgUrl":"./movie-images/6-masumlar-apartmani.jpg"
+		"Series":"Comedy",
+		"imgUrl":"./movie-images/19-the-incredibles.jpg"
 	},
 	{
 		"Id":"20",
-		"Title":"xxx",
-		"releaseYear":"2012",
-		"Series":"Romantic Comedy",
-		"imgUrl":"./movie-images/6-masumlar-apartmani.jpg"
+		"Title":"Inception",
+		"releaseYear":"2011",
+		"Series":"Action",
+		"imgUrl":"./movie-images/20-inception.jpg"
 	},
 	{
 		"Id":"21",
-		"Title":"xxx",
+		"Title":"Léon: The Professional",
 		"releaseYear":"2012",
-		"Series":"Romantic Comedy",
-		"imgUrl":"./movie-images/6-masumlar-apartmani.jpg"
+		"Series":"Action",
+		"imgUrl":"./movie-images/21-Leon.jpg"
 	},
 	{
 		"Id":"22",
-		"Title":"xxx",
+		"Title":"Braveheart",
 		"releaseYear":"2012",
-		"Series":"Romantic Comedy",
-		"imgUrl":"./movie-images/6-masumlar-apartmani.jpg"
+		"Series":"Drama",
+		"imgUrl":"./movie-images/22-braveheart.jpg"
 	},
 	{
 		"Id":"23",
-		"Title":"xxx",
+		"Title":"V for Vendetta",
 		"releaseYear":"2012",
-		"Series":"Romantic Comedy",
-		"imgUrl":"./movie-images/6-masumlar-apartmani.jpg"
+		"Series":"Action",
+		"imgUrl":"./movie-images/23-v-for-vendetta.jpg"
 	},
 	{
 		"Id":"24",
-		"Title":"xxx",
+		"Title":"The Lord Of The Rings",
 		"releaseYear":"2012",
-		"Series":"Romantic Comedy",
-		"imgUrl":"./movie-images/6-masumlar-apartmani.jpg"
-	},
-	{
-		"Id":"25",
-		"Title":"xxx",
-		"releaseYear":"2012",
-		"Series":"Romantic Comedy",
-		"imgUrl":"./movie-images/6-masumlar-apartmani.jpg"
-	},
-	{
-		"Id":"26",
-		"Title":"xxx",
-		"releaseYear":"2012",
-		"Series":"Romantic Comedy",
-		"imgUrl":"./movie-images/6-masumlar-apartmani.jpg"
+		"Series":"Action",
+		"imgUrl":"./movie-images/the-lord-of-the-rings.jpg"
 	}
 ]

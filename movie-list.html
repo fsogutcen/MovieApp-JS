@@ -170,15 +170,19 @@
 
         var data;
         var featuredImg = document.getElementsByClassName("movie-img")[0]
+        var featuredTitle = document.getElementById("movie-title")
 
-        function changeImage(myList) {
+
+        function changeMovie(myList) {
             $(".list-img").click(function (event) {
                 // alert(event.target.id);
                 console.log(myList[event.target.id - 1]);
                 var num = event.target.id - 1
                 featuredImg.setAttribute("src", myList[num].imgUrl);
+                featuredTitle.innerHTML=(myList[num].Title);
             });
         }
+
 
         function theAscFunction() {
             counter = 21; //release yıl sınırlaması nedeniyle değiştiği için yeniden belirliyoruz.
@@ -194,7 +198,7 @@
 
                     sortTrackingTitle(veri);
                     template(veri);
-                    changeImage(myJsonList);
+                    changeMovie(myJsonList);
 
 
                 })
@@ -218,7 +222,7 @@
                     sortTrackingTitle(veri, 'DESC');
                     //console.log(veri);
                     template(veri);
-                    changeImage(myJsonList);
+                    changeMovie(myJsonList);
                 })
         }
 
@@ -235,7 +239,7 @@
                     sortTrackingReleaseYear(veri, 'DESC');
                     // console.log(veri);
                     template(veri);
-                    changeImage(myJsonList);
+                    changeMovie(myJsonList);
                 })
 
         }
@@ -253,7 +257,7 @@
                     sortTrackingReleaseYear(veri);
                     // console.log(veri);
                     template(veri);
-                    changeImage(myJsonList);
+                    changeMovie(myJsonList);
                 })
         }
 
