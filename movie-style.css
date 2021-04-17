@@ -93,3 +93,38 @@ body{
 .footer{
     border-top: 1px solid #f6f6f6;
 }
+
+.back-to-top {
+    visibility: hidden;
+    background-color: #2c3e50;
+    color: #fff;
+    width: 42px;
+    height: 42px;
+    text-align: center;
+    line-height: 38px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 90;
+    cursor: pointer;
+    opacity: 0;
+    border-radius: 3px;		
+    transform: rotate(0deg);
+    transition: all .4s
+}
+
+.back-to-top .fa {
+    font-size: 22px;
+    vertical-align: middle
+}
+
+.back-to-top:hover {
+    background-color: #e0404d;
+    color: #fff;
+    opacity: 1;
+}
+
+.back-to-top.show {
+    visibility: visible;
+    opacity: 1;
+}
