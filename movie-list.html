@@ -17,16 +17,38 @@
 
     <div class="container header">
         <img src="movie-images/movies-logo.png" class="logo">
-        <a href="#" class="header-btn"><i class="fa fa-user"></i>Account</a>
+        <a onclick="myFunction()" href="#" class="header-btn"><i class="fa fa-user"></i>Account</a>
+    </div>
+
+    <div class="container movie-details">
+        <div class="row">
+            <div class="col-md-6 left-box">
+                <h1 id="movie-title">Leyla ile Mecnun</h1>
+                <p>Film açıklaması gibi bişeylerin olduğu kısım. <br />Bir miktar da film bilgisi...</p>
+                <p>Cast: </p>
+                <div class="casting">
+                    <img src="movie-images/leyla-ile-mecnun-ali-atay.jpg" title="Ali Atay" />
+                    <img src="movie-images/leyla-ile-mecnun-cengiz-bozkurt.jpg" title="cengiz-bozkurt" />
+                    <img src="movie-images/leyla-ile-mecnun-ezgi-asaroglu.jpg" title="ezgi-asaroglu" />
+                    <img src="movie-images/leyla-ile-mecnun-serkan-keskin.jpg" title="serkan-keskin" />
+                </div>
+                <a href="#"><i class="fa fa-play"></i>Watch Now</a>
+                <a href="#" class="download-btn"><i class="fa fa-arrow-down"></i>Download</a>
+
+            </div>
+            <div class="col-md-6 text-center">
+                <img src="movie-images/4-leyla-ile-mecnun.jpg" class="movie-img" />
+            </div>
+        </div>
     </div>
 
     <div class="container series">
         <h3>Popular Movies</h3>
         <div class="row">
             <a onclick="return theDescFunction();" href="#" class="header-btn"></i>title in descending</a>
-            <a onclick="return theAscFunction();"  href="#" class="header-btn"></i>title in ascending</a>
-            <a onclick="return sortByYearDescFunction();"  href="#" class="header-btn"></i>sortByYearDescFunction</a>
-            <a onclick="return sortByYearAscFunction();"  href="#" class="header-btn"></i>sortByYearAscFunction</a>
+            <a onclick="return theAscFunction();" href="#" class="header-btn"></i>title in ascending</a>
+            <a onclick="return sortByYearDescFunction();" href="#" class="header-btn"></i>sortByYearDescFunction</a>
+            <a onclick="return sortByYearAscFunction();" href="#" class="header-btn"></i>sortByYearAscFunction</a>
         </div>
 
         <div class="row" id="filmler-listele">
@@ -37,36 +59,32 @@
     <footer class="footer text-center text-white mt-4">
         <!-- Grid container -->
         <div class="container p-3 pb-0">
-          <!-- Section: Social media -->
-          <section class="">
-            <!-- Facebook -->
-            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-              ><i class="fa fa-facebook-f"></i
-            ></a>
-      
-            <!-- Twitter -->
-            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-              ><i class="fa fa-twitter"></i
-            ></a>
-      
-            <!-- Google -->
-            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-              ><i class="fa fa-google"></i
-            ></a>
-      
-            <!-- Instagram -->
-            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-              ><i class="fa fa-instagram"></i
-            ></a>
-          </section>
-          <!-- Section: Social media -->
+            <!-- Section: Social media -->
+            <section class="">
+                <!-- Facebook -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                        class="fa fa-facebook-f"></i></a>
+
+                <!-- Twitter -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                        class="fa fa-twitter"></i></a>
+
+                <!-- Google -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                        class="fa fa-google"></i></a>
+
+                <!-- Instagram -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                        class="fa fa-instagram"></i></a>
+            </section>
+            <!-- Section: Social media -->
         </div>
         <!-- Grid container -->
-      
+
         <!-- Copyright -->
         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-          © 2021 -
-          <a class="text-white" href="https://www.linkedin.com/in/fsogutcen/" target="_blank"> by fsogutcen</a>
+            © 2021 -
+            <a class="text-white" href="https://www.linkedin.com/in/fsogutcen/" target="_blank"> by fsogutcen</a>
         </div>
         <!-- Copyright -->
     </footer>
@@ -75,16 +93,16 @@
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script>
-        
+
         // Back to top button
-        (function() {
-            $(document).ready(function() {
-                return $(window).scroll(function() {
-                return $(window).scrollTop() > 100 ? $("#back-to-top").addClass("show") : $("#back-to-top").removeClass("show")
-                }), $("#back-to-top").click(function() {
-                return $("html,body").animate({
-                    scrollTop: "0"
-                })
+        (function () {
+            $(document).ready(function () {
+                return $(window).scroll(function () {
+                    return $(window).scrollTop() > 100 ? $("#back-to-top").addClass("show") : $("#back-to-top").removeClass("show")
+                }), $("#back-to-top").click(function () {
+                    return $("html,body").animate({
+                        scrollTop: "0"
+                    })
                 })
             })
         }).call(this);
@@ -123,80 +141,103 @@
                 });
         }
 
-        function template(array){
+        function template(array) {
             for (let i = 0; i < counter; i++) {
-                        let releaseYearData = array[i].releaseYear;
-                        console.log("Title: " + array[i].Title);
+                let releaseYearData = array[i].releaseYear;
+                // console.log("Title: " + array[i].Title);
 
-                        if (releaseYearData >= 2010) {
-                            let divElementCol = document.createElement('div')
-                            divElementCol.classList.add('col-6', 'col-md-4', 'col-lg-2');
+                if (releaseYearData >= 2010) {
+                    let divElementCol = document.createElement('div')
+                    divElementCol.classList.add('col-6', 'col-md-4', 'col-lg-2');
 
-                            let divElementImage = document.createElement('img')
-                            divElementImage.setAttribute("src", array[i].imgUrl);
-                            divElementImage.setAttribute("width", "150px");
-                            parent.appendChild(divElementCol)
-                            divElementCol.appendChild(divElementImage)
+                    let divElementImage = document.createElement('img')
+                    divElementImage.setAttribute("src", array[i].imgUrl);
+                    divElementImage.setAttribute("width", "150px");
+                    divElementImage.classList.add("list-img");
+                    divElementImage.setAttribute('id', array[i].Id);;
 
-                        } else {
-                            counter++;
-                            console.log("!!!---This Movie Release Year <=2010");
-                        }
-                    }
+
+                    parent.appendChild(divElementCol)
+                    divElementCol.appendChild(divElementImage)
+
+                } else {
+                    counter++;
+                    console.log("!!!---This Movie Release Year <=2010");
+                }
+            }
+
         }
 
         var data;
-        
+        var featuredImg = document.getElementsByClassName("movie-img")[0]
+
+        function changeImage(myList) {
+            $(".list-img").click(function (event) {
+                // alert(event.target.id);
+                console.log(myList[event.target.id - 1]);
+                var num = event.target.id - 1
+                featuredImg.setAttribute("src", myList[num].imgUrl);
+            });
+        }
+
         function theAscFunction() {
-            counter=21; //release yıl sınırlaması nedeniyle değiştiği için yeniden belirliyoruz.
+            counter = 21; //release yıl sınırlaması nedeniyle değiştiği için yeniden belirliyoruz.
             $("#filmler-listele").html("");
             data = fetch("movies.json")
-            .then(response => response.json())
-            .then(veri => {
-                // console.log(veri);
-                sortTrackingTitle(veri);  
-                template(veri);
-            })
+                .then(response => response.json())
+                .then(veri => {
+
+                    //JSON to array
+                    var myJsonString = JSON.stringify(veri);
+                    var myJsonList = JSON.parse(myJsonString)
+                    // console.log("------------------myJsonString: " + myJsonString);
+
+                    sortTrackingTitle(veri);
+                    template(veri);
+                    changeImage(myJsonList);
+
+
+                })
 
         }
-        
+
         //sayfa açılırkenki sıralama
         theAscFunction();
 
 
         function theDescFunction() {
-            counter=21;//release yıl sınırlaması nedeniyle değiştiği için yeniden belirliyoruz.
+            counter = 21;//release yıl sınırlaması nedeniyle değiştiği için yeniden belirliyoruz.
             $("#filmler-listele").html("");
             data = fetch("movies.json")
                 .then(response => response.json())
                 .then(veri => {
                     sortTrackingTitle(veri, 'DESC');
-                    console.log(veri);
+                    //console.log(veri);
                     template(veri);
                 })
         }
 
-        function sortByYearDescFunction(){
-            counter=21;//release yıl sınırlaması nedeniyle değiştiği için yeniden belirliyoruz.
+        function sortByYearDescFunction() {
+            counter = 21;//release yıl sınırlaması nedeniyle değiştiği için yeniden belirliyoruz.
             $("#filmler-listele").html("");
             data = fetch("movies.json")
                 .then(response => response.json())
                 .then(veri => {
                     sortTrackingReleaseYear(veri, 'DESC');
-                    console.log(veri);
+                    // console.log(veri);
                     template(veri);
                 })
 
         }
 
-        function sortByYearAscFunction(){
-            counter=21;//release yıl sınırlaması nedeniyle değiştiği için yeniden belirliyoruz.
+        function sortByYearAscFunction() {
+            counter = 21;//release yıl sınırlaması nedeniyle değiştiği için yeniden belirliyoruz.
             $("#filmler-listele").html("");
             data = fetch("movies.json")
                 .then(response => response.json())
                 .then(veri => {
                     sortTrackingReleaseYear(veri);
-                    console.log(veri);
+                    // console.log(veri);
                     template(veri);
                 })
         }
