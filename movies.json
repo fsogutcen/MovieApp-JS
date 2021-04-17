@@ -4,70 +4,70 @@
 		"Title":"Amelie",
 		"releaseYear":"2012",
 		"Series":"Romantic Comedy",
-		"imgUrl":"./movie-images/1-Amelie-poster.jpg"
+		"imgUrl":"./assets/movie-images/1-Amelie-poster.jpg"
 	},
 	{
 		"Id":"2",
 		"Title":"Organize İşler",
 		"releaseYear":"2012",
 		"Series":"Comedy",
-		"imgUrl":"./movie-images/2-organize-isler.jpg"
+		"imgUrl":"./assets/movie-images/2-organize-isler.jpg"
 	},
 	{
 		"Id":"3",
 		"Title":"Iron Man",
 		"releaseYear":"2008",
 		"Series":"Action",
-		"imgUrl":"./movie-images/3-iron-man.jpg"
+		"imgUrl":"./assets/movie-images/3-iron-man.jpg"
 	},
 	{
 		"Id":"4",
 		"Title":"Interstellar",
 		"releaseYear":"2012",
 		"Series":"Action",
-		"imgUrl":"./movie-images/4-interstellar.jpg"
+		"imgUrl":"./assets/movie-images/4-interstellar.jpg"
 	},
 	{
 		"Id":"5",
 		"Title":"Inside Out",
 		"releaseYear":"2015",
 		"Series":"Comedy",
-		"imgUrl":"./movie-images/5-inside-out.jpg"
+		"imgUrl":"./assets/movie-images/5-inside-out.jpg"
 	},
 	{
 		"Id":"6",
 		"Title":"Avatar",
 		"releaseYear":"2019",
 		"Series":"sci-fi",
-		"imgUrl":"./movie-images/6-avatar.jpg"
+		"imgUrl":"./assets/movie-images/6-avatar.jpg"
 	},
 	{
 		"Id":"7",
 		"Title":"Arog",
 		"releaseYear":"2012",
 		"Series":"Comedy",
-		"imgUrl":"./movie-images/7-Arog.jpg"
+		"imgUrl":"./assets/movie-images/7-Arog.jpg"
 	},
 	{
 		"Id":"8",
 		"Title":"Gora",
 		"releaseYear":"2012",
 		"Series":"Comedy",
-		"imgUrl":"./movie-images/8-Gora.jpg"
+		"imgUrl":"./assets/movie-images/8-Gora.jpg"
 	},
 	{
 		"Id":"9",
 		"Title":"Matrix (The Matrix)",
 		"releaseYear":"2012",
 		"Series":"sci-fi",
-		"imgUrl":"./movie-images/9-matrix.jpg"
+		"imgUrl":"./assets/movie-images/9-matrix.jpg"
 	},
 	{
 		"Id":"10",
 		"Title":"The Martian",
 		"releaseYear":"2015",
 		"Series":"sci-fi",
-		"imgUrl":"./movie-images/10-the-martian.jpg"
+		"imgUrl":"./assets/movie-images/10-the-martian.jpg"
 	},
 	{
 		"Id":"11",
@@ -102,84 +102,84 @@
 		"Title":"Fast & Furious 9",
 		"releaseYear":"2021",
 		"Series":"Action",
-		"imgUrl":"./movie-images/15-fast-and-furious.jpg"
+		"imgUrl":"./assets/movie-images/15-fast-and-furious.jpg"
 	},
 	{
 		"Id":"16",
 		"Title":"Star Wars: The Rise of Skywalker",
 		"releaseYear":"2019",
 		"Series":"Documentary",
-		"imgUrl":"./movie-images/16-star-wars-the-rise-of-skywalker.jpeg"
+		"imgUrl":"./assets/movie-images/16-star-wars-the-rise-of-skywalker.jpeg"
 	},
 	{
 		"Id":"17",
 		"Title":"The Boss Baby",
 		"releaseYear":"2017",
 		"Series":"Comedy",
-		"imgUrl":"./movie-images/17-boss-baby.jpg"
+		"imgUrl":"./assets/movie-images/17-boss-baby.jpg"
 	},
 	{
 		"Id":"18",
 		"Title":"Eternal Sunshine of the Spotless Mind",
 		"releaseYear":"2014",
 		"Series":"Romantic",
-		"imgUrl":"./movie-images/18-eternal-sunshine-of-the-spotless-mind.jpg"
+		"imgUrl":"./assets/movie-images/18-eternal-sunshine-of-the-spotless-mind.jpg"
 	},
 	{
 		"Id":"19",
 		"Title":"The Incredibles",
 		"releaseYear":"2012",
 		"Series":"Comedy",
-		"imgUrl":"./movie-images/19-the-incredibles.jpg"
+		"imgUrl":"./assets/movie-images/19-the-incredibles.jpg"
 	},
 	{
 		"Id":"20",
 		"Title":"Inception",
 		"releaseYear":"2011",
 		"Series":"Action",
-		"imgUrl":"./movie-images/20-inception.jpg"
+		"imgUrl":"./assets/movie-images/20-inception.jpg"
 	},
 	{
 		"Id":"21",
 		"Title":"Léon: The Professional",
 		"releaseYear":"2012",
 		"Series":"Action",
-		"imgUrl":"./movie-images/21-Leon.jpg"
+		"imgUrl":"./assets/movie-images/21-Leon.jpg"
 	},
 	{
 		"Id":"22",
 		"Title":"Braveheart",
 		"releaseYear":"2012",
 		"Series":"Drama",
-		"imgUrl":"./movie-images/22-braveheart.jpg"
+		"imgUrl":"./assets/movie-images/22-braveheart.jpg"
 	},
 	{
 		"Id":"23",
 		"Title":"V for Vendetta",
 		"releaseYear":"2012",
 		"Series":"Action",
-		"imgUrl":"./movie-images/23-v-for-vendetta.jpg"
+		"imgUrl":"./assets/movie-images/23-v-for-vendetta.jpg"
 	},
 	{
 		"Id":"24",
 		"Title":"The Lord Of The Rings",
 		"releaseYear":"2012",
 		"Series":"Action",
-		"imgUrl":"./movie-images/the-lord-of-the-rings.jpg"
+		"imgUrl":"./assets/movie-images/the-lord-of-the-rings.jpg"
 	},
 	{
 		"Id":"25",
 		"Title":"Babam ve Oğlum",
 		"releaseYear":"2012",
 		"Series":"Drama",
-		"imgUrl":"./movie-images/25-babam-ve-oglum.jpg"
+		"imgUrl":"./assets/movie-images/25-babam-ve-oglum.jpg"
 	},
 	{
 		"Id":"26",
 		"Title":"Rocky Balboa",
 		"releaseYear":"2006",
 		"Series":"Drama",
-		"imgUrl":"./movie-images/26-rockybalboa.jpg"
+		"imgUrl":"./assets/movie-images/26-rockybalboa.jpg"
 	}
 	
 ]
